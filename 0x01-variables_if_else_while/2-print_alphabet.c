@@ -9,9 +9,12 @@
  **/
 int main(void)
 {
-	char ch;
+	char ch, emp;
+
+	emp = '\n';
 
 	for (ch = 'a'; ch <= 'z'; ch++)
 		putchar(ch);
+		putchar(emp);
 	return (0);
 }
