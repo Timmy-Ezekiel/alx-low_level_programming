@@ -20,7 +20,7 @@ int main(void)
 	/* your code goes there */
 	if (n  >  0)
 	{
-		printf("%d is positivei\n", n);
+		printf("%d is positive\n", n);
 	}
 	else if (n == 0)
 	{
