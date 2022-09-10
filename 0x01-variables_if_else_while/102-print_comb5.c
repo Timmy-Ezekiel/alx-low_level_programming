@@ -16,9 +16,9 @@ int main(void)
 	{
 		for (b = 0; b < 10; b++)
 		{
-			for (c = 0; c < 10; c++)
+			for (c = a; c < 10; c++)
 			{
-				for (d = 0; d < 10; d++)
+				for (d = b + 1; d < 10; d++)
 				{
 					if (b == d)
 					{
@@ -41,5 +41,6 @@ int main(void)
 			}
 		}
 	}
+			putchar('\n');
 return (0);
 }
