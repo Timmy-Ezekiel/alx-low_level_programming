@@ -24,15 +24,22 @@ void times_table(void)
 				rem2 = mul / 10;
 				_putchar(rem2 + '0');
 				_putchar(rem1 + '0');
+				_putchar(',');
+				_putchar('.');
+			}
+			else if ((mul == 9) || (mul == 8))
+			{
+				_putchar(mul + '0');
+				_putchar(',');
+				_putchar('.');
 			}
 			else
 			{
 				_putchar(mul + '0');
-			}
-			if (x != 9)
-			{
 				_putchar(',');
-				_putchar('\t');
+				_putchar('.');
+				_putchar('.');
+				
 			}
 		}
 		_putchar('\n');
