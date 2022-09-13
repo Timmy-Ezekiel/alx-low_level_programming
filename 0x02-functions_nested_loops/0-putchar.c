@@ -1,6 +1,6 @@
 #include <stdio.h>
+#include "main.h"
 
-void printPutchar(void);
 /**
 	* main - Entry Point
 	*
@@ -8,19 +8,7 @@ void printPutchar(void);
 	*
 	**/
 int main(void)
-{
-	printPutchar();
-return (0);
 }
-
-/**
-	* printPutchar()- prints the string _putchar
-	*
-	* Return: (void) Success
-	*
-	**/
-void printPutchar(void)
-{
-	printf("_putchar\n");
-return;
+	_putchar("_putchar");
+return (0);
 }
