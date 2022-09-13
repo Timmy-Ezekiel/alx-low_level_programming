@@ -14,15 +14,29 @@
 void print_to_98(int n)
 {
 	int x;
-
-	for (x = n; x < 99; x++)
+	if (n <= 98)
 	{
-		printf("%d", x);
-		if(x != 98)
+		for (x = n; x < 99; x++)
 		{
-			printf(", ");
+			printf("%d", x);
+			if(x != 98)
+			{
+				printf(", ");
+			}
 		}
 	}
+	else
+	{
+		for (x = n; x >= 98; x--)
+		{
+			printf("%d", x);
+			if(x != 98)
+			{
+				printf(", ");
+			}
+		}
+	}
+
 	putchar('\n');
 return;
 }
