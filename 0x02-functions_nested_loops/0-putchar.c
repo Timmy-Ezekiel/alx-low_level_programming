@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -8,7 +7,15 @@
 	*
 	**/
 int main(void)
-}
-	_putchar('\n');
+{
+	char name[] = "_putchar";
+	int x = 0;
+
+	while (x <= 7)
+	{
+		_putchar(name[x]);
+		x++;
+	}
+		_putchar('\n');
 return (0);
 }
