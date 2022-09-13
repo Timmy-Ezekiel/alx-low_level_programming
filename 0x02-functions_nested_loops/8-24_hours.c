@@ -11,30 +11,30 @@
 
 void jack_bauer(void)
 {
-	int hour, min;
+	int a, b, c, d, e;
 
-	hour = 0;
-		while (hour < 24)
+	e = 10;
+	for (a = 0; a < 3; a++)
+	{
+		if (a == 2)
 		{
-			if (hour < 10)
-			{
-				_putchar(0 + '0');
-			}
-			_putchar(hour + '0');
-			_putchar(':');
-
-	min = 0;
-			while (min <= 60)
-			{
-				if (min < 10)
-				{
-					_putchar(0 + '0');
-				}
-			_putchar(min + '0');
-			_putchar('\n');
-			min++;
-			}
-			hour++;
+			e = 4;
 		}
+		for (b = 0; b < e; b++)
+		{
+			for (c = 0; c < 6; c++)
+			{
+				for (d = 0; d < 10; d++)
+				{
+					_putchar(a + '0');
+					_putchar(b + '0');
+					_putchar(':');
+					_putchar(c + '0');
+					_putchar(d + '0');
+					_putchar('\n');
+				}
+			}
+		}
+	}
 return;
 }
