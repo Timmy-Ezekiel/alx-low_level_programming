@@ -1,5 +1,6 @@
 #include "main.h"
 #include <ctype.h>
+#include <stdio.h>
 
 /**
 	* _islower - character case checker
@@ -11,9 +12,9 @@
 	**/
 int _islower(int c)
 {
-	int x;
+	int y;
 
-	x = islower(c);
-	return (x);
+	y = islower(c);
+	return (y);
 }
 

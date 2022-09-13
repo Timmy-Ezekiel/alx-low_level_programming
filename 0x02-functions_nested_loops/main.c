@@ -1,22 +1,33 @@
 #include "main.h"
 
 /**
-	* main - Entry point
-	*
-	* Return: Alwayes 0.
-	*
-	**/
-
+ * main - check the code.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	int r;
+    int r;
 
-	r = _islower('H');
-	_putchar(r + '0');
-	r = _islower('a');
-	_putchar(r + '0');
-	r = _islower(108);
-	_putchar(r + '0');
-	_putchar('\n');
-	return (0);
+    r = print_sign(98);
+    _putchar(',');
+    _putchar(' ');
+    _putchar(r + '0');
+    _putchar('\n');
+    r = print_sign(0);
+    _putchar(',');
+    _putchar(' ');
+    _putchar(r + '0');
+    _putchar('\n');
+    r = print_sign(0xff);
+    _putchar(',');
+    _putchar(' ');
+    _putchar(r + '0');
+    _putchar('\n');
+    r = print_sign(-1);
+    _putchar(',');
+    _putchar(' ');
+    _putchar(r + '0');
+    _putchar('\n');
+    return (0);
 }
