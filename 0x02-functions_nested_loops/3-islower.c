@@ -14,7 +14,14 @@ int _islower(int c)
 {
 	int y;
 
-	y = islower(c);
+	if ((c >= 97) && (c <= 122))
+	{
+		y = 1;
+	}
+	else
+	{
+		y = 0;
+	}
 	return (y);
 }
 
