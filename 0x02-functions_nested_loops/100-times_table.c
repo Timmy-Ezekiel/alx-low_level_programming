@@ -1,46 +1,46 @@
 #include "main.h"
 
 /**
-  * print_times_table - Prints times table for user input > 0 and < 15
-  *
-  * @n : integer parameter
-  *
-  * Return: void
-  *
- **/
-
+ * print_times_table - Prints the n times table
+ *
+ * @n: number times table (0 < n <= 15)
+ *
+ * Return: no return
+ */
 void print_times_table(int n)
 {
-	int x, y, sum;
+	int a, b, op;
 
-	if (!((n > 15) && (n < 0)))
+	if (n >= 0 && n <= 15)
 	{
-		for (x = 0; x <= n; x++)
+		for (a = 0; a <= n; a++)
 		{
-			for (y = 0; y <=n; y++)
+			_putchar(48);
+			for (b = 1; b <= n; b++)
 			{
-				sum = x * y;
-				/*This conditional checks sum > 9 due to _putchar restriction*/ 
-				if (sum > 9)
+				op = a * b;
+				_putchar(44);
+				_putchar(32);
+				if (op <= 9)
 				{
-					_putchar((sum / 10) + '0');
-					_putchar((sum % 10) + '0');
+					_putchar(32);
+					_putchar(32);
+					_putchar(op + 48);
 				}
-				else if (sum > 99)
+				else if (op <= 99)
 				{
-					_putchar((sum / 100) + '0');
-					_putchar(((sum % 100) / 10) + '0');
-					_putchar(((sum % 100) % 10) + '0');
+					_putchar(32);
+					_putchar((op / 10) + 48);
+					_putchar((op % 10) + 48);
 				}
 				else
 				{
-					_putchar(sum + '0');
+					_putchar(((op / 100) % 10) + 48);
+					_putchar(((op / 10) % 10) + 48);
+					_putchar((op % 10) + 48);
 				}
-				/*This conditional helps create space and comma*/
-					_putchar(' ');
 			}
 			_putchar('\n');
-		} 
+		}
 	}
-return;
 }

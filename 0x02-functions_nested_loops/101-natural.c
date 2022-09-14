@@ -1,23 +1,20 @@
 #include <stdio.h>
 
 /**
-  * main - Entry point
-  *
-  * Return: (0) success
-  *
-  **/
-
+ * main - Prints natural numbers below 1024 that are
+ * multiplies of 3 or 5
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	int x, y = 0;
+	int a, b;
 
-	for (x = 1; x < 1024; x++)
+	for (a = 1; a < 1024; a++)
 	{
-		if (((x % 3) || (x % 5)) == 0)
-		{
-			y += x;
-		}
+		if ((a % 3) == 0 || (a % 5) == 0)
+			b += a;
 	}
-	printf("%d\n", y);
+	printf("%d\n", b);
 	return (0);
 }
