@@ -11,12 +11,11 @@
 
 int print_last_digit(int x)
 {
-	int y, z;
+	int y;
 
 	if (x < 0)
 	{
-		z = x * -1;
-		y = z % 10;
+		y = -1 * (x % 10);
 	}
 	else
 	{
