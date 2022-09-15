@@ -19,6 +19,10 @@ void print_line(int n)
 			_putchar('_');
 			x++;
 		}
+		_putchar('\n');
 	}
-	_putchar('\n');
+	else
+	{
+		_putchar('\n');
+	}
 }
