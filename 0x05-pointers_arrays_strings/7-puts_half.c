@@ -31,8 +31,8 @@ void puts_half(char *str)
 	}
 	else
 	{
-		x = ((stlen - 1) / 2);
-		while (x <= stlen)
+		x = ((stlen - 1) / 2) + 1;
+		while (x < stlen)
 		{
 			putchar(*(str + x));
 			x++;
