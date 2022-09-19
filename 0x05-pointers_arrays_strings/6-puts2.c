@@ -16,9 +16,11 @@ void puts2(char *str)
 	x = 0;
 	while (*(str + x) != '\0')
 	{
-		ch = *(str + x);
-		putchar(ch);
-		x += 2;
+		if ((x % 2) == 0)
+		{
+			ch = *(str + x);
+			putchar(ch);
+		}
 	}
 	putchar('\n');
 }
