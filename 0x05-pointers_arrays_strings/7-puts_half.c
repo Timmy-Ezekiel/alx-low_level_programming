@@ -10,7 +10,7 @@
 
 void puts_half(char *str)
 {
-	int x, y, stlen, newlen;
+	int x, stlen;
 
 	stlen = 0;
 	x = 0;
