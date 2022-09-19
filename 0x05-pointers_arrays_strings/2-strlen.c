@@ -13,8 +13,15 @@
 int _strlen(char *s)
 {
 	int len;
-	char value[] = *s;
+	int x;
+	int n = 0;
 
-	len = strlen(value);
+	x = 0;
+	while (*(s + x) != '\0')
+	{
+		n += 1;
+		x++;
+	}
+	len = n;
 	return (len);
 }
