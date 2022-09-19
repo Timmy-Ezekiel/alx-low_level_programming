@@ -10,7 +10,9 @@
 
 int main(void)
 {
-	char name[] = "timmytuyi";
+char *str;
 
-	int x = _strlen(&name);
+    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+    _puts(str);
+    return (0);
 }
