@@ -21,7 +21,7 @@ void print_rev(char *s)
 		x++;
 	}
 
-	y = stlen;
+	y = stlen - 1;
 	while (y >= 0)
 	{
 		ch = *(s + y);
