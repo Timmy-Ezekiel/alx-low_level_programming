@@ -11,7 +11,6 @@
 void puts_half(char *str)
 {
 	int x, y, stlen, newlen;
-	char ch;
 
 	stlen = 0;
 	x = 0;
