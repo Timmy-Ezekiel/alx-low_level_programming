@@ -18,19 +18,22 @@ void rev_string(char *s)
 		stlen += 1;
 		x++;
 	}
-
+/* saving the reverse form of the char string in a new char variable */
 	char str[stlen];
 
-	y = stlen;
+	y = stlen - 1;
 	x = 0;
-	while ((y >= 0) && (x <= stlen))
+	while ((y >= 0) && (x < stlen))
 	{
-		if (*(s + y) != '\0')
-		{
-			*(str + x) = *(s + y);
-			y--;
-			x++;
-		}
+		*(str + x) = *(s + y);
+		y--;
+		x++;
 	}
-	printf("%s\n", str);
+/*Changing the character string to a reversed char string*/
+	x = 0;
+	while (x < stlen)
+	{
+		*(s + x) = *(str + x);
+		x++;
+	}
 }
