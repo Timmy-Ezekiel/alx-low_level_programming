@@ -10,7 +10,7 @@
 void rev_string(char *s)
 {
 	int x, y, stlen;
-
+/*counting the length of the variable*/
 	stlen = 0;
 	x = 0;
 	while (*(s + x) != '\0')
@@ -19,7 +19,7 @@ void rev_string(char *s)
 		x++;
 	}
 /* saving the reverse form of the char string in a new char variable */
-	char str[stlen];
+	char str[10];
 
 	y = stlen - 1;
 	x = 0;
