@@ -13,7 +13,7 @@ int is_prime_function(int n, int x);
 int is_prime_number(int n)
 {
 	int x;
-	
+
 	if (n <= 1)
 	{
 		return (0);
