@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 		if (convert == 0)
 		{
 			printf("Error\n");
-			return (0);
+			return (1);
 		}
 		else
 		{
