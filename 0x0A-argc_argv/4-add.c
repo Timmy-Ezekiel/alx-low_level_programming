@@ -25,7 +25,10 @@ int main(int argc, char **argv)
 			printf("Error\n");
 			return (0);
 		}
-		sum += convert;
+		else
+		{
+			sum += convert;
+		}
 	}
 	printf("%d\n", sum);
 	return (0);
