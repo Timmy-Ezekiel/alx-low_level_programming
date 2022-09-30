@@ -20,12 +20,12 @@ int main(int argc, char **argv)
 	for (x = 1; x < argc; x++)
 	{
 		convert = atoi(argv[x]);
-		if (convert <= 0)
+		if (convert == 0)
 		{
 			printf("Error\n");
 			return (1);
 		}
-		sum += convert;
+		sum = sum + convert;
 	}
 	printf("%d\n", sum);
 	return (0);
