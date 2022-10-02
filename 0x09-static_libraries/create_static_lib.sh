@@ -1,2 +1,3 @@
 #!/bin/bash
-ar -rc *.o
+gcc *.c
+ar -rc liball.a *.o
