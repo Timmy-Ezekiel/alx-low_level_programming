@@ -1,32 +1,32 @@
-#include "stdio.h"
-
+#include "main.h"
 /**
-  * cap_string - Changes all first letter of word to CAPS
-  *
-  * @str : string pointer
-  *
-  * Return: str
-  *
- **/
-
+ * cap_string - Function that capitalizes all words of a string.
+ * @str: String to capitalize words.
+ * Return: Capitalized sentence.
+ */
 char *cap_string(char *str)
 {
-	int x, y;
+	int i = 0, j;
+	char a[] = " \t\n,;.!?\"(){}";
 
-	x = y = 0;
-	while (str[x] != '\0')
+	while (*(s + i))
 	{
-		if ((str[x] == '.') || (str[x] == ' ') || (str[x] == '\n'))
+		if (*(s + i) >= 'a' && *(s + i) <= 'z')
 		{
-			x++;
-			y = str[x];
-			if (y >= 97 && y <= 122)
+			if (i == 0)
+				*(s + i) -= 'a' - 'A';
+			else
 			{
-				y = y - 32;
-				str[x] = y;
+				for (j = 0; j <= 12; j++)
+				{
+					if (a[j] == *(s + i - 1))
+						*(s + i) -= 'a' - 'A';
+				}
 			}
-			x = x - 1;
 		}
-		x++;
+		i++;
 	}
+	return (s);
+
 }
+

@@ -12,19 +12,17 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int x, y, answer;
-	/*Counts first string s1*/
-	x = 0;
-	while (s1[x] != '\0')
+	int i, retval;
+
+	i = 0;
+	while (s1[i] != '\0' || s2[i] != '\0')
 	{
-		x++;
+		if (s1[i] != s2[i])
+		{
+			retval = s1[i] - s2[i];
+			return (retval);
+		}
+		i++;
 	}
-	/*Counts second string s2*/
-	y = 0;
-	while (s2[y] != '\0')
-	{
-		y++;
-	}
-	answer = (x - y) * 15;
-	return (answer);
+	return (0);
 }

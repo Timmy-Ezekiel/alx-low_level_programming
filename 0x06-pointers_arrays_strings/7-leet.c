@@ -10,37 +10,19 @@
 
 char *leet(char *str)
 {
-	int x, y;
+	int i, j;
+	char a[] = "AaEeOoTtLl";
+	char b[] = "4433007711";
 
-	x = 0;
-	while (str[x] != '\0')
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		y = str[x];
-		if ((y == 65) || (y == 97))
+		for (j = 0; j < 10; j++)
 		{
-			str[x] = 52;
+			if (str[i] == a[j])
+			{
+				str[i] = b[j];
+			}
 		}
-		else if ((y == 69) || (y == 101))
-		{
-			str[x] = 51;
-		}
-		else if ((y == 79) || (y == 111))
-		{
-			str[x] = 48;
-		}
-		else if ((y == 84) || (y == 116))
-		{
-			str[x] = 55;
-		}
-		else if ((y == 76) || (y == 108))
-		{
-			str[x] = 49;
-		}
-		else
-		{
-			continue;
-		}
-		x++;
 	}
 	return (str);
 }

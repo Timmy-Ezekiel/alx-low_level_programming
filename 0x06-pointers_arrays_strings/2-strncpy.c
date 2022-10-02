@@ -10,25 +10,19 @@
   * Return: dest string
   *
  **/
-
 char *_strncpy(char *dest, char *src, int n)
 {
-	/*Initialize needed varibles*/
-	int x, y;
-	/*Counts the length of dest string*/
-	x = 0;
-	while (dest[x] != '\0')
+	int i;
+
+	i = 0;
+	while (src[i] != '\0' && i < n)
 	{
-		x++;
+		dest[i] = src[i];
+		i++;
 	}
-	/*Copies the src to dest*/
-	y = 0;
-	while (src[y] != '\0')
+	for (; n > i; i++)
 	{
-		dest[x] = src[y];
-		x++;
-		y++;
+		dest[i] = '\0';
 	}
-	dest[x] = '\0';
 	return (dest);
 }
