@@ -22,13 +22,22 @@ int **alloc_grid(int width, int height)
 	gridA = malloc(height * sizeof(int *));
 	/*Check malloc*/
 	if (gridA == NULL)
+	{
+		free(gridA);
 		return (NULL);
+	}
 	/*Allocate memory to integers for pointer to pointers*/
 	for (i = 0; i < height; i++)
 	{
 		gridA[i] = malloc(width * sizeof(int));
 		if (gridA[i] == NULL)
-			return (NULL);
+		{
+			for (x = 0; x <= i; x++)
+			{
+				free(gridA[x]);
+				return (NULL);
+			}
+		}
 	}
 	/*Initialize each integer to 0*/
 	for (x = 0; x < height; x++)
