@@ -34,10 +34,10 @@ int **alloc_grid(int width, int height)
 		{
 			for (x = 0; x <= i; x++)
 			{
-				free(gridA[i][x]);
-				return (NULL);
+				free(gridA[x]);
 			}
 			free(gridA);
+			return (NULL);
 		}
 	}
 	/*Initialize each integer to 0*/
