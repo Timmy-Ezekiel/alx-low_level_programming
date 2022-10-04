@@ -37,6 +37,7 @@ int **alloc_grid(int width, int height)
 				free(gridA[x]);
 				return (NULL);
 			}
+			free(gridA);
 		}
 	}
 	/*Initialize each integer to 0*/
