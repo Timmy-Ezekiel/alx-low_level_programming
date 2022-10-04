@@ -18,7 +18,7 @@ char *str_concat(char *s1, char *s2)
 	int x, y; /*Variables to store the length of strings*/
 	int a, b; /*Varibles for loops*/
 
-	if ((s1 == NULL) && (s2 == NULL))
+	if ((s1 == NULL) || (s2 == NULL))
 		return (NULL);
 	/*Get the length of the two strings*/
 	x = 0;
