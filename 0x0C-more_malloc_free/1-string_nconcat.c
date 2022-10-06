@@ -17,14 +17,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *newstring;
 	unsigned int length1, length2, x, y, a = 0;
-	
+
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 	length1 = _strlength(s1);
 	length2 = _strlength(s2);
-	
 	/*Allocated enough memory for any condition of n && s2*/
 	if (length2 >= n)
 	{
@@ -37,11 +36,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		newstring = malloc(y * sizeof(char));
 	}
 	if (newstring == NULL)
-	{
-		free(newstring);
 		return (NULL);
-	}
-
 	for (x = 0; x < (y - 1); x++)
 	{
 		if (x < length1)
