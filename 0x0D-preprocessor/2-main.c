@@ -5,12 +5,12 @@
   *main - Entry point
   *
   *
-  *Return: int
+  *Return: int 0 Success
   *
  **/
 
-void main(void)
+int main(void)
 {
 	printf("%s\n", __FILE__);
+	return (0);
 }
-  
