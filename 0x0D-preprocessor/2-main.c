@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#ifndef __FILE__
-#define __FILE__
-#endif
-
 /**
   *main - Entry point
   *
@@ -13,9 +9,8 @@
   *
  **/
 
-int main(void)
+void main(void)
 {
 	printf("%s\n", __FILE__);
-	return (0);
 }
   
