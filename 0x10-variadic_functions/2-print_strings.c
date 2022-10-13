@@ -27,7 +27,7 @@ void print_strings(const char *seperator, const unsigned int n, ...)
 			printf("%s", str);
 		if ((x != (n - 1)) && (seperator != NULL))
 			printf("%s", seperator);
-		else if (x == (n - 1))
-			putchar('\n');
 	}
+	putchar('\n');
+	va_end(list);
 }
