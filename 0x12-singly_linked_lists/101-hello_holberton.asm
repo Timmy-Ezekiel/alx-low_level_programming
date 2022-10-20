@@ -1,7 +1,15 @@
-.data
-str: .asciiz "Hello, Holberton\n"
+	SECTION .data
+msg:	db "Hello, Holberton", 0
+fmt:	db "%s", 10, 0
 
-.text
-li $v0, 4
-la $a0, str
-syscall
+	SECTION .text
+	extern printf
+	global main
+main:
+	mov esi, msg
+	mov edi, fmt
+	mov eax, 0
+	call printf
+
+	mov eax, 0
+	ret
