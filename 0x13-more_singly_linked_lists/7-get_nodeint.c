@@ -19,11 +19,13 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	nthnode = malloc(sizeof(listint_t));
 	if (nthnode == NULL)
 		return (NULL);
-	while (iterator != index)
+	while ((iterator != index) && (head != NULL))
 	{
 		head = head->next;
 		iterator++;
 	}
+	if (head == NULL)
+		return (NULL);
 	nthnode->n = head->n;
 	nthnode->next = head->next;
 	return (nthnode);
