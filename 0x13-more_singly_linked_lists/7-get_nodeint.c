@@ -15,15 +15,18 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	unsigned int iterator = 0;
 	listint_t *nthnode;
+	listint_t *interate;
 
 	nthnode = malloc(sizeof(listint_t));
 	if (nthnode == NULL)
 		return (NULL);
+	interate = head;
 	while (iterator != index)
 	{
-		head = head->next;
+		interate = interate->next;
 		iterator++;
 	}
-	nthnode = head;
+	nthnode->n = interate->n;
+	nthnode->next = interate->next;
 	return (nthnode);
 }
